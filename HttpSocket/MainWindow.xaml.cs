@@ -24,14 +24,13 @@ namespace HttpSocket
             // for debugging
             if (!AttachConsole(-1))
                 AllocConsole();
-
-            button1.IsEnabled = false;
+    
             rootDitrectory.TextWrapping = TextWrapping.NoWrap;
         }
 
         protected void Button_Click(object sender, EventArgs e)
         {
-            button1.IsEnabled = true;
+           
             if (!CheckPortNumber())
                 return;
 
@@ -51,7 +50,7 @@ namespace HttpSocket
             server.Start();
 
             button.IsEnabled = false;
-            button1.IsEnabled = true;
+            
         }
 
         // After disposing socket something try reference it   
