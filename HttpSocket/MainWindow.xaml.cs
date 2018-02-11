@@ -29,8 +29,7 @@ namespace HttpSocket
         }
 
         protected void Button_Click(object sender, EventArgs e)
-        {
-           
+        {        
             if (!CheckPortNumber())
                 return;
 
@@ -49,8 +48,7 @@ namespace HttpSocket
             server = new Thread(() => AsynchronousSocketListener.StartListening(portNumber)); 
             server.Start();
 
-            button.IsEnabled = false;
-            
+            button.IsEnabled = false;         
         }
 
         // After disposing socket something try reference it   
